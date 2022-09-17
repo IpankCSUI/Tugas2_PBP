@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
     path('katalog/', include('katalog.urls')),
-    path(' ', include('mywatchlist.urls')),
+    path('', include('mywatchlist.urls')),
     path('xml/', include('mywatchlist.urls')),
     path('json/', include('mywatchlist.urls')),
     path('json/<int:id>', include('mywatchlist.urls')),
