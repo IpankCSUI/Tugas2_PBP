@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"False",
+            "title":"Infinity War",
+            "rating":5,
+            "release_date":"5 Februari 2018",
+            "review":"Star Lord bodoh"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"False",
+            "title":"Endgame",
+            "rating":5,
+            "release_date":"11 April 2019",
+            "review":"Captain marvel gitu doang?"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"False",
+            "title":"Age of Ultron",
+            "rating":4,
+            "release_date":"10 November 2016",
+            "review":"Wanda prime age"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"True",
+            "title":"Multiverse of Madness",
+            "rating":4,
+            "release_date":"20 Mei 2022",
+            "review":"I can do this all day, sedetik ilang"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"True",
+            "title":"No Way Home",
+            "rating":5,
+            "release_date":"23 Juli 2022",
+            "review":"Wanda ga kena spell amnesia"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"True",
+            "title":"Far From Home",
+            "rating":5,
+            "release_date":"16 Juni 2020",
+            "review":"kostumnya jelek"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"False",
+            "title":"Homecoming",
+            "rating":5,
+            "release_date":"21 Juli 2017",
+            "review":"Spidermannya bocil"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"False",
+            "title":"Civil War",
+            "rating":5,
+            "release_date":"7 Maret 2017",
+            "review":"sebel sama roger"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"True",
+            "title":"Ragnarok",
+            "rating":5,
+            "release_date":"17 Juli 2022",
+            "review":"AAAAAA AAAAA"
+        }
+    },
+    {
+        "model":"mywatchlist.filmwatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"False",
+            "title":"Sayap Patah",
+            "rating":4,
+            "release_date":"17 Agustus 2022",
+            "review":"Walaupun dirimu tak... bersayapp..."
+        }
+    }
+]
