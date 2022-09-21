@@ -84,5 +84,6 @@ urlpatterns = [
     j. Simpan variabel-variabel tersebut.
     
     k. membuka tab GitHub Actions dan jalankan kembali workflow yang gagal.
-4. Mengakses tiga URL di poin 6 menggunakan Postman, menangkap screenshot, dan menambahkannya ke dalam README.md
+4. Mengakses tiga URL di poin 6 menggunakan Postman, menangkap screenshot, dan menambahkannya ke dalam README.md 
+https://drive.google.com/drive/folders/1K-e2xWWYpFgvcbh4ZR0yxXHZ-Y7NxrvH?usp=sharing
 5. Menambahkan unit test pada tests.py untuk menguji bahwa tiga URL di poin 6 dapat mengembalikan respon HTTP 200 OK
