@@ -1,7 +1,7 @@
-from django.http import HttpResponse
-from django.core import serializers
 from django.shortcuts import render
 from mywatchlist.models import FilmWatchlist
+from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
 def show_watchlist(request):

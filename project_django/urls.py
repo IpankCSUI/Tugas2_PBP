@@ -18,8 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('example_app.urls')),
-    path('katalog/', include('katalog.urls')),
+    path('/html', include('example_app.urls')),
     path('mywatchlist/', include('mywatchlist.urls')),
     path('xml/', include('mywatchlist.urls')),
     path('json/', include('mywatchlist.urls')),
