@@ -74,4 +74,4 @@ def create_task(request):
     else:
         form = CreateTask(initial={'user': request.user})
     context = {'form': form}
-    return render(request, 'create_task.html', context)
+    return render(request, 'create-task.html', context)
