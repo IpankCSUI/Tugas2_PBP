@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from todolist.form import CreateTask
+from todolist.forms import CreateTask
 from todolist.models import Task
 
 # Create your views here.
