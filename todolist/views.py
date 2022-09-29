@@ -13,10 +13,9 @@ from todolist.models import Task
 # Create your views here.
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    task_list = Task.objects.filter(user = request.user)
+    task_list = Task.objects.filter(user = request.user).all()
     context = {
-        'todo_list': task_list,
-        'last_login': request.COOKIES['last_login']
+        'task_list': task_list
     }
     return render(request, 'todolist.html', context)
 
