@@ -1,32 +1,36 @@
 {% extends 'base.html' %}
 {% block meta %}
-<title>{{user.username}} todolist</title>
-<h1>Halo {{user.username}}</h1>
+<title>{{user.username}} Todolist</title>
+<h1>{{user.username}} To Do List</h1>
 {% endblock meta %}
 
 {% block content %}  
     <head>
         {% load static %}
     </head>
-    <h1>Assignment 4 PBP "Todolist"</h1>
-    <button><a href="{% url 'todolist:create' %}">Tambah Tugas</a></button>
+    <!-- Button untuk membuat tugas Bary -->
+    <button><a href="{% url 'todolist:create' %}">Add New Task</a></button>
 
-    <h4>Todos:</h4>
+    <h2>Task :</h2>
     <table>
         <tr>
+        <!-- membuat header table-->
           <th>Create Date</th>
           <th>Title</th>
           <th>Description</th>
         </tr>
         {% comment %} Add the data below this line {% endcomment %}
-        {% for task in task_list %}
+        <!-- Mengiterasi data tugas pada query database -->
+        {% for task in todo_list %}
             <tr>
-                <th>{{task.date}}</th>
+                <td>{{task.date}}</td>
                 <th>{{task.title}}</th>
-                <th>{{task.description}}</th>
+                <td>{{task.description}}</td>
+                <td> 
             </tr>
         {% endfor %}
       </table>
+    <!-- Implementasi last login -->
     <h3>last login: {{last_login}}</h3>
     <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 

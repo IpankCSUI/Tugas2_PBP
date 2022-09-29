@@ -4,4 +4,4 @@ from todolist.models import Task
 class CreateTask(ModelForm):
     class Meta:
         model = Task
-        fields = ['title', 'description', ]
+        fields = ['title', 'description' ]
