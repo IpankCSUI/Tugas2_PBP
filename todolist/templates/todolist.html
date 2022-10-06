@@ -1,34 +1,53 @@
 {% extends 'base.html' %}
 {% block meta %}
-<title>{{user.username}} Todolist</title>
-<h1>{{user.username}} TodoList</h1>
+<title class="text-center">{{user.username}} Todolist</title>
+<h1 class="text-center">{{user.username}} TodoList</h1>
 {% endblock meta %}
-
 {% block content %}  
+
+  <style>
+    .ho:hover {
+      text-shadow: none !important;
+      box-sizing: border-box !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      -webkit-transform: scale(1.1) !important;
+      -ms-transform: scale(1.1) !important;
+      transform: scale(1.1) !important;
+      z-index: 2;
+    }
+  </style>
     <head>
         {% load static %}
     </head>
     <!-- Button untuk membuat tugas Bary -->
-    <button><a href="{% url 'todolist:create' %}">Add New Task</a></button>
-
     <h2>Task List:</h2>
-    <table>
-        <tr>
-        <!-- membuat header table-->
-          <th>Create Date</th>
-          <th>Title</th>
-          <th>Description</th>
-        </tr>
+    <body class="w-50 text-center">
         {% comment %} Add the data below this line {% endcomment %}
         <!-- Mengiterasi data tugas pada query database -->
         {% for task in task_list %}
-            <tr>
-                <td>{{task.date}}</td>
-                <th>{{task.title}}</th>
-                <td>{{task.description}}</td>
-            </tr>
+
+              <div class="card">
+                <h5 class="card-header bg-warning">{{task.date}}</h5>
+                <div class="card-body wow fadeInLeft slow">
+                  <h5 class="card-title">{{task.title}}</h5>
+                  <p class="card-text">{{task.description}}</p>
+                </div>
+              </div>
+            </div>
+            
         {% endfor %}
-      </table>
-    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </body>
+    <div class="text-center">
+      <button class="w-50 btn btn-lg btn-info"><a href="{% url 'todolist:create' %}">Add New Task</a></button>
+    <button class="w-50 btn btn-lg btn-info"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        new WOW().init();
+      });
+    </script>
+    
 
 {% endblock content %}

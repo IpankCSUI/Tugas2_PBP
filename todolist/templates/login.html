@@ -5,32 +5,44 @@
 {% endblock meta %}
 
 {% block content %}
+<html lang="en">
 
-<div class = "login">
 
-    <h1>Login</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
 
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
+<body>
+    <div class="global-container d-flex align-items-center justify-content-center">
+        <div class="card login-form bg-info">
+            <div class="card-body">
+                ,<h1 class = "card-title text-center">Login</h1>
+            </div>
+            <div class="card-text">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label class="form-label">Username</label>
+                      <input type="text" class="form-control" name="username">
+                      
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input type="password" class="form-control" name="password">
+                    </div>
+                    <div class="mb-3 form-check vertical-center">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn login_btn bg-primary ">Login</button>
+                    </div>
+                  </form>
+            </div>
+            {% if messages %}
         <ul>
             {% for message in messages %}
                 <li>{{ message }}</li>
@@ -39,7 +51,9 @@
     {% endif %}     
         
     Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
-</div>
-
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 {% endblock content %}

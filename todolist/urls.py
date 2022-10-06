@@ -1,5 +1,5 @@
 from django.urls import path
-from todolist.views import create_task,  register, login_user, logout_user,show_todolist
+from todolist.views import create_task, register, login_user, logout_user,show_todolist
  #sesuaikan dengan nama fungsi yang dibuat
 
 app_name = 'todolist'
