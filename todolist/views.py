@@ -72,8 +72,8 @@ def show_todolist_json(request):
 
 def add_task(request):
     if request.method == "POST":
-        judul = request.POST.get('title')
-        deskripsi = request.POST.get('description')
-        new_task = Task(user=request.user, title=judul, description=deskripsi, date=datetime.now())
-        new_task.save()
+        x = request.POST.get('title')
+        y = request.POST.get('description')
+        new_item = Task.objects.create(user=request.user, date = str(datetime.datetime.now().date()), title= x, description = y)
+        new_item.save()
     return HttpResponse('')
