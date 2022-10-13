@@ -24,29 +24,27 @@ def show_todolist(request):
 
 def register(request):
     form = UserCreationForm()
+
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Akun telah berhasil dibuat!')
             return redirect('todolist:login')
+    
     context = {'form':form}
     return render(request, 'register.html', context)
 
 def login_user(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, user) # melakukan login terlebih dahulu
-            response = HttpResponseRedirect(reverse("todolist:show_todolist")) # membuat response
-            response.set_cookie('last_login', str(datetime.datetime.now())) # membuat cookie last_login dan menambahkannya ke dalam response
-            return response
-        else:
-            messages.info(request, 'Username atau Password salah!')
+            login(request, user)
+            return redirect("todolist:show_todolist")
     context = {}
-    return render(request, 'login.html', context)
+    return render(request, "login.html", context)
 
 def logout_user(request):
     logout(request)
@@ -66,3 +64,16 @@ def create_task(request):
         form = CreateTask(initial={'user': request.user})
     context = {'form': form}
     return render(request, 'create_task.html', context)
+
+@login_required(login_url="/todolist/login")
+def show_todolist_json(request):
+    tasks = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', tasks), content_type='application/json')
+
+def add_task(request):
+    if request.method == "POST":
+        judul = request.POST.get('title')
+        deskripsi = request.POST.get('description')
+        new_task = Task(user=request.user, title=judul, description=deskripsi, date=datetime.now())
+        new_task.save()
+    return HttpResponse('')

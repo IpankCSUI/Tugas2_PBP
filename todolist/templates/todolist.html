@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block meta %}
 <h1 class="text-center">{{user.username}} TodoList</h1>
-
 {% endblock meta %}
+
 {% block content %}  
 
     <head>
@@ -26,12 +26,42 @@
         {% endfor %}
 
         <div class="text-center">
-          <button class="w-50 btn btn-lg btn-info"><a href="{% url 'todolist:create' %}">Add New Task</a></button>
+          <button class="w-50 btn btn-lg btn-info"><a href="{% url 'todolist:create' %}">New Task</a></button>
+          <button type="button" class="w-50 btn btn-lg btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Task</button>
+
           <button class="w-50 btn btn-lg btn-info"><a href="{% url 'todolist:logout' %}">Logout</a></button>
         </div>
 
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Title:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
     </body>
-    
-    
 
 {% endblock content %}

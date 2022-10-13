@@ -5,19 +5,22 @@
         <div class="card bg-info">
             <div class="card-body">
                 <h1 class = "card-title text-center">Tambah Task</h1>
+            
+                <div class="card-text">
+                    <form method="POST" >  
+                        {% csrf_token %}  
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" name="title"> 
+                        <label class="form-label">Description</label>
+                        <input type="text" class="form-control" name="description">
+                        <div class="text-center">
+                            <button type="submit" class="btn login_btn bg-primary ">Tambah</button>
+                        </div>
+                    </form>
+                    
+                </div>
             </div>
-            <div class="card-text">
-                <form method="POST" >  
-                    {% csrf_token %}  
-                    <label class="form-label">Title</label>
-                    <input type="text" class="form-control" name="title"> 
-                    <label class="form-label">Description</label>
-                    <input type="text" class="form-control" name="description">
-                    <div class="text-center">
-                        <button type="submit" class="btn login_btn bg-primary ">Tambah</button>
-                    </div>
-                </form>
-                
-            </div>
+        </div>
+    </div>
 
 {% endblock %}
