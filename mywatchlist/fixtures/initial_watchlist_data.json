@@ -6,7 +6,7 @@
             "watched":true,
             "title":"Infinity War",
             "rating":5,
-            "release_date":"5 Februari 2018",
+            "release_date":"2022-01-30",
             "review":"Star Lord bodoh"
         }
     },
@@ -17,7 +17,7 @@
             "watched":false,
             "title":"Endgame",
             "rating":5,
-            "release_date":"11 April 2019",
+            "release_date":"2022-02-30",
             "review":"Captain marvel gitu doang?"
         }
     },
@@ -28,7 +28,7 @@
             "watched":false,
             "title":"Age of Ultron",
             "rating":4,
-            "release_date":"10 November 2016",
+            "release_date":"2022-03-30",
             "review":"Wanda prime age"
         }
     },
@@ -39,7 +39,7 @@
             "watched":true,
             "title":"Multiverse of Madness",
             "rating":4,
-            "release_date":"20 Mei 2022",
+            "release_date":"2022-04-30",
             "review":"I can do this all day, sedetik ilang"
         }
     },
@@ -50,7 +50,7 @@
             "watched":true,
             "title":"No Way Home",
             "rating":5,
-            "release_date":"23 Juli 2022",
+            "release_date":"2022-05-30",
             "review":"Wanda ga kena spell amnesia"
         }
     },
@@ -61,7 +61,7 @@
             "watched":true,
             "title":"Far From Home",
             "rating":5,
-            "release_date":"16 Juni 2020",
+            "release_date":"2022-06-30",
             "review":"kostumnya jelek"
         }
     },
@@ -72,7 +72,7 @@
             "watched":false,
             "title":"Homecoming",
             "rating":5,
-            "release_date":"21 Juli 2017",
+            "release_date":"2022-07-30",
             "review":"Spidermannya bocil"
         }
     },
@@ -83,7 +83,7 @@
             "watched":false,
             "title":"Civil War",
             "rating":5,
-            "release_date":"7 Maret 2017",
+            "release_date":"2022-08-30",
             "review":"sebel sama roger"
         }
     },
@@ -94,7 +94,7 @@
             "watched":true,
             "title":"Ragnarok",
             "rating":5,
-            "release_date":"17 Juli 2022",
+            "release_date":"2022-09-30",
             "review":"AAAAAA AAAAA"
         }
     },
@@ -105,7 +105,7 @@
             "watched":false,
             "title":"Sayap Patah",
             "rating":4,
-            "release_date":"17 Agustus 2022",
+            "release_date":"2022-10-30",
             "review":"Walaupun dirimu tak... bersayapp..."
         }
     }

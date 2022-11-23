@@ -1,0 +1,242 @@
+.identity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-create-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    text-align: center;
+    text-decoration: none;
+    border-collapse: collapse;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #15aabf;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 75px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-collapse: collapse;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #dd5a5a;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .nav-top-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+    align-content: space-around;
+  }
+  
+  .title h1 {
+    color: #15aabf;
+    margin-left: 75px;
+    font-size: 32px;
+  }
+  
+  .section-cards .row {
+  align-items: center;
+  }
+  
+  .container-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  .container-content .cards-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  .cards-box .cards {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 265px;
+  transition: 0.7s;
+  }
+  
+  .cards-box .cards:hover {
+  background: #309df0;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 9;
+  }
+  
+  .cards-box .cards:hover::before {
+  background: rgb(85 108 214 / 10%);
+  }
+  
+  .cards-box .cards:hover .title h3,
+  .cards-box .cards:hover .description p {
+  color: #fff;
+  }
+  
+  .cards-box .cards:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
+  }
+  
+  .cards-box .cards:hover .description button {
+  background: #fff !important;
+  color: #309df0;
+  }
+  
+  .cards-box .cards:hover .delete-task {
+  background: #fff !important;
+  color: #309df0;
+  }
+  
+  .cards .title h3 {
+  color: #212121;
+  font-size: 1.3rem;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  }
+  
+  .cards .description p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  }
+  
+  .cards .description button {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    140deg,
+    #42c3ca 0%,
+    #42c3ca 50%,
+    #42c3cac7 75%
+  ) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+  margin-bottom: 10px;
+  }
+  
+  .cards .delete-task {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    140deg,
+    #da1b1b 0%,
+    #da1b1b 50%,
+    #da1b1bc7 75%
+  ) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+  margin-bottom: 10px;
+  }
+  
+  .hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+  }
+  
+  .cards-box .cards:hover .hover_color_bubble {
+  top: 0rem;
+  }
+  
+  .cards-box .cards .so_top_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .cards-box .cards .so_top_icon img {
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
+  }
+  
+  /*start media query*/
+  @media screen and (min-width: 320px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: 0;
+  }
+  
+  .container-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container-content .cards-box {
+    flex: auto;
+  }
+  }
+  @media only screen and (min-width: 768px) {
+  .container-content .cards-box {
+    flex: 1;
+  }
+  }
+  @media only screen and (min-width: 1024px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: -3rem;
+  }
+  .container-content {
+    width: 50%;
+    margin: 0 auto;
+  }
+  }
